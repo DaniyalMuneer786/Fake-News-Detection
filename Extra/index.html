@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthSeeker - Fake News Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>TruthSeeker</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#detector">Detector</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#stats">Statistics</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Detect Fake News with Confidence</h1>
+            <p>Our advanced algorithm helps you identify misinformation and verify the credibility of news articles.</p>
+            <a href="#detector" class="btn">Try It Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="News Verification">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Understanding Fake News</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Fake news refers to false or misleading information presented as legitimate news. It's designed to influence public opinion, generate clicks, or spread propaganda.</p>
+                    <p>In today's digital age, misinformation spreads faster than ever before, making it crucial to verify information before believing or sharing it.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Misleading Headlines</h3>
+                        <p>Sensationalist titles designed to attract clicks but misrepresent the actual content.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Fabricated Content</h3>
+                        <p>Completely false information created to deceive readers.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <h3>Manipulated Context</h3>
+                        <p>Real information presented in a misleading context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="detector" class="detector">
+        <div class="container">
+            <h2>Fake News Detector</h2>
+            <div class="detector-content">
+                <div class="detector-form">
+                    <form id="news-form">
+                        <div class="form-group">
+                            <label for="news-title">News Headline</label>
+                            <input type="text" id="news-title" placeholder="Enter the news headline" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="news-content">News Content</label>
+                            <textarea id="news-content" placeholder="Paste the news article content here..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="news-source">Source (Optional)</label>
+                            <input type="text" id="news-source" placeholder="Where did you find this news?">
+                        </div>
+                        <button type="submit" class="btn">Analyze</button>
+                    </form>
+                </div>
+                <div class="detector-result" id="result">
+                    <div class="result-placeholder">
+                        <i class="fas fa-search"></i>
+                        <p>Enter news details to analyze</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How Our Detector Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Input Analysis</h3>
+                        <p>Our system analyzes the headline and content for sensationalist language, excessive punctuation, and all-caps text.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Pattern Recognition</h3>
+                        <p>We identify common patterns found in fake news articles, such as emotional manipulation and lack of sources.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Credibility Score</h3>
+                        <p>Based on multiple factors, we generate a credibility score to help you determine the reliability of the news.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2>Fake News Statistics</h2>
+            <div class="stats-content">
+                <div class="stat-card">
+                    <div class="stat-number">86%</div>
+                    <p>of people have been exposed to fake news at least once</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">70%</div>
+                    <p>of people have difficulty distinguishing fake news from real news</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6x</div>
+                    <p>Fake news spreads 6 times faster than real news on social media</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">59%</div>
+                    <p>of people share news without verifying its authenticity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TruthSeeker</h2>
+                    <p>Empowering critical thinking in the digital age</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#detector">Detector</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@truthseeker.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TruthSeeker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
